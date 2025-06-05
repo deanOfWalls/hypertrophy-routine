@@ -47,6 +47,13 @@ td {
   font-size: 0.95rem;
 }
 
+/* Style for the "Day" column */
+th:first-child,
+td:first-child {
+  width: 4rem;
+  text-align: center;
+}
+
 tbody tr:hover td {
   background-color: #2a2a2a;
 }
