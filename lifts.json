@@ -1,50 +1,60 @@
 {
   "Incline Bench Press": {
+    "day": ["Tuesday", "Friday"],
     "1RM": 130.2,
     "targetReps": 10,
     "sets": 4
   },
   "Seated Dumbbell Shoulder Press": {
+    "day": ["Tuesday", "Friday"],
     "1RM": null,
     "targetReps": 8,
     "sets": 4
   },
   "Tricep Dips": {
+    "day": ["Tuesday", "Friday"],
     "1RM": "bodyweight",
     "targetReps": 10,
     "sets": 3
   },
   "Barbell Rows (EZ bar)": {
+    "day": ["Wednesday", "Saturday"],
     "1RM": null,
     "targetReps": 8,
     "sets": 4
   },
   "Dumbbell Curl": {
+    "day": ["Wednesday", "Saturday"],
     "1RM": 35.0,
     "targetReps": 10,
     "sets": 3
   },
   "Reverse Dumbbell Curl": {
+    "day": ["Wednesday", "Saturday"],
     "1RM": 27.5,
     "targetReps": 12,
     "sets": 3
   },
   "Leg Raises": {
+    "day": ["Wednesday", "Saturday"],
     "1RM": null,
     "targetReps": 12,
     "sets": 4
   },
   "Light Barbell Squats": {
+    "day": ["Monday", "Thursday"],
     "1RM": null,
     "targetReps": 10,
     "sets": 4
   },
   "Romanian Deadlifts": {
+    "day": ["Monday", "Thursday"],
     "1RM": null,
     "targetReps": 8,
     "sets": 3
   },
   "Standing Calf Raises": {
+    "day": ["Monday", "Thursday"],
     "1RM": null,
     "targetReps": 15,
     "sets": 4
