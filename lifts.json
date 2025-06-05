@@ -1,11 +1,52 @@
 {
   "Incline Bench Press": {
-    "1RM": 130.2
+    "1RM": 130.2,
+    "targetReps": 10,
+    "sets": 4
+  },
+  "Seated Dumbbell Shoulder Press": {
+    "1RM": null,
+    "targetReps": 8,
+    "sets": 4
+  },
+  "Tricep Dips": {
+    "1RM": "bodyweight",
+    "targetReps": 10,
+    "sets": 3
+  },
+  "Barbell Rows (EZ bar)": {
+    "1RM": null,
+    "targetReps": 8,
+    "sets": 4
   },
   "Dumbbell Curl": {
-    "1RM": 35.0
+    "1RM": 35.0,
+    "targetReps": 10,
+    "sets": 3
   },
   "Reverse Dumbbell Curl": {
-    "1RM": 27.5
+    "1RM": 27.5,
+    "targetReps": 12,
+    "sets": 3
+  },
+  "Leg Raises": {
+    "1RM": null,
+    "targetReps": 12,
+    "sets": 4
+  },
+  "Light Barbell Squats": {
+    "1RM": null,
+    "targetReps": 10,
+    "sets": 4
+  },
+  "Romanian Deadlifts": {
+    "1RM": null,
+    "targetReps": 8,
+    "sets": 3
+  },
+  "Standing Calf Raises": {
+    "1RM": null,
+    "targetReps": 15,
+    "sets": 4
   }
 }

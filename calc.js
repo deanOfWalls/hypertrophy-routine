@@ -1,29 +1,27 @@
-function targetWeight(oneRepMax, reps) {
+function workingWeight(oneRepMax, reps) {
   return Math.round(oneRepMax / (1 + reps / 30));
 }
-
-const repTargets = [5, 8, 10, 12]; // Modify if needed
 
 fetch('lifts.json')
   .then(res => res.json())
   .then(data => {
     const output = document.getElementById('output');
 
-    for (const [exercise, stats] of Object.entries(data)) {
+    for (const [exercise, info] of Object.entries(data)) {
+      const oneRM = info["1RM"];
+      const reps = info["targetReps"];
+      const sets = info["sets"];
+
+      // Skip entries with no valid numeric 1RM
+      if (typeof oneRM !== "number") continue;
+
+      const target = workingWeight(oneRM, reps);
       const wrapper = document.createElement('li');
-      const title = document.createElement('strong');
-      title.textContent = exercise;
-      wrapper.appendChild(title);
-
-      const list = document.createElement('ul');
-      repTargets.forEach(reps => {
-        const est = targetWeight(stats["1RM"], reps);
-        const li = document.createElement('li');
-        li.textContent = `${reps}RM → ${est} lbs`;
-        list.appendChild(li);
-      });
-
-      wrapper.appendChild(list);
+      wrapper.innerHTML = `
+        <strong>${exercise}</strong><br>
+        1RM: ${oneRM} lbs<br>
+        Target: <strong>${sets}x${reps}</strong> @ ${target} lbs
+      `;
       output.appendChild(wrapper);
     }
   });
