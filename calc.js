@@ -6,8 +6,8 @@ function roundToNearestFive(weight) {
   return Math.round(weight / 5) * 5;
 }
 
-function abbreviate(day) {
-  return day.slice(0, 3);
+function abbreviateAll(days) {
+  return days.map(d => d.slice(0, 3)).join('/');
 }
 
 fetch('lifts.json')
@@ -33,7 +33,9 @@ fetch('lifts.json')
 
     for (const [exercise, info] of Object.entries(data)) {
       const { sets, targetReps, "1RM": oneRM, day } = info;
-      const dayLabel = Array.isArray(day) && day.length > 0 ? abbreviate(day[0]) : "—";
+      const dayLabel = Array.isArray(day) && day.length > 0
+        ? abbreviateAll(day)
+        : "—";
 
       let target = "—";
       let recommended = "—";
