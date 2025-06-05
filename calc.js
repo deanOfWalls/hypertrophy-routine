@@ -1,5 +1,9 @@
 function workingWeight(oneRepMax, reps) {
-  return Math.round(oneRepMax / (1 + reps / 30));
+  return oneRepMax / (1 + reps / 30);
+}
+
+function roundToNearestRealistic(weight) {
+  return Math.round(weight / 5) * 5;
 }
 
 fetch('lifts.json')
@@ -12,15 +16,17 @@ fetch('lifts.json')
       const reps = info["targetReps"];
       const sets = info["sets"];
 
-      // Skip entries with no valid numeric 1RM
       if (typeof oneRM !== "number") continue;
 
-      const target = workingWeight(oneRM, reps);
+      const raw = workingWeight(oneRM, reps);
+      const rounded = roundToNearestRealistic(raw);
+
       const wrapper = document.createElement('li');
       wrapper.innerHTML = `
         <strong>${exercise}</strong><br>
         1RM: ${oneRM} lbs<br>
-        Target: <strong>${sets}x${reps}</strong> @ ${target} lbs
+        Target: ${sets}x${reps} @ ${raw.toFixed(1)} lbs<br>
+        Recommended: <strong>${rounded} lbs</strong>
       `;
       output.appendChild(wrapper);
     }
