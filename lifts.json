@@ -19,13 +19,13 @@
   },
   "Barbell Rows (EZ bar)": {
     "day": ["Wednesday", "Saturday"],
-    "1RM": null,
+    "1RM": 88.8,
     "targetReps": 8,
     "sets": 4
   },
   "Dumbbell Curl": {
     "day": ["Wednesday", "Saturday"],
-    "1RM": 35.0,
+    "1RM": 40.83,
     "targetReps": 10,
     "sets": 3
   },
@@ -49,7 +49,7 @@
   },
   "Romanian Deadlifts": {
     "day": ["Monday", "Thursday"],
-    "1RM": null,
+    "1RM": 162.13,
     "targetReps": 8,
     "sets": 3
   },
